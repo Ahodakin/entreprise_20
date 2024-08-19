@@ -1,0 +1,287 @@
+.navbar{
+    font-weight: 900;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: red;
+}
+.navbar .container-fluid .navbar-brand{
+    color: #b88a4d;
+}
+.navbar .container-fluid a{
+    color: gray;
+}
+.navbar .container-fluid a:hover, .navbar .container-fluid a:focus {
+    color: #b88a4d;
+}
+#form_search_items input, #form_search_items button, #container_btn_nv_cmpt a, #container_qlq_profe a, #container_search_tri_par_zone input, #container_search_tri_par_zone button, #container_icone_prof_pro a{
+    border: 1px solid;
+    border-color: #b88a4d;
+    color: #b88a4d;
+}
+#form_search_items button:hover, #container_btn_nv_cmpt a:hover, #container_qlq_profe a:hover, #container_search_tri_par_zone button:hover, #container_icone_prof_pro a:hover{
+    background-color: #b88a4d;
+    color: white;
+}
+.carousel-inner h1{
+    color: #b88a4d;
+    font-weight: 900;
+}
+.carousel-inner p{
+    font-size: clamp(16px, 2vw, 25px);
+}
+
+#carouselImage{
+    height: 72vh;
+}
+
+.offcanvas-body input, .offcanvas-body label, .offcanvas-body button{
+    color: gray;
+    font-weight: 600;
+}
+
+/* responsive pour le header */
+@media screen and (min-width:992px) {
+    #container_btn_compte_pro_and_search_mobile{
+        display: none;
+    }
+    #container_btn_compte_pro_and_search_pc{
+        display: flex;
+    }
+    #btn_dropdown_navbar{
+        display: none;
+    }
+}
+@media screen and (max-width:991px) {
+    #container_btn_compte_pro_and_search_mobile{
+        display: flex;
+    }
+    #container_btn_compte_pro_and_search_pc{
+        display: none;
+    }
+    #btn_dropdown_navbar{
+        display: flex;
+    }
+}
+/* fin responsive pour le header */
+
+/* responsive pour index */
+    /* SECTION A PARTIR DE <h3>QUELQUES PROFESSIONELS</h3> */
+    @media screen and (min-width:992px) {
+        #container_qlq_pro_text{
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: -70px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 92%;
+            box-sizing: border-box;
+            min-height: 33vh;
+            border-radius: 10px;
+            box-shadow: 0px 0px 9px 1px #000000ba;
+            background: linear-gradient(to right, #b88a4d, #552d16);
+        }
+        #container_qlq_pro_text div:nth-child(1){
+            width: 70%;
+        }
+        #container_qlq_pro_text div:nth-child(2){
+            width: 10px;
+            background-color: white;
+        }
+        #container_qlq_pro_text div:nth-child(3){
+            width: 30%;
+            margin-left: 15px;
+        }
+        #container_qlq_pro_text h2, #container_qlq_pro_text p{
+            font-weight: 900;
+            color: white;
+        }
+    }
+
+    @media screen and (max-width:991px) {
+        #container_qlq_pro_text{
+            display: block;
+            align-items: center;
+            position: absolute;
+            top: -70px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 95%;
+            box-sizing: border-box;
+            min-height: 33vh;
+            border-radius: 10px;
+            box-shadow: 0px 0px 9px 1px #000000ba;
+            background: linear-gradient(to right, #b88a4d, #552d16);
+        }
+        #container_qlq_pro_text div:nth-child(1){
+            width: 100%;
+        }
+        #container_qlq_pro_text div:nth-child(2){
+            width: 100%;
+            background-color: white;
+        }
+        #container_qlq_pro_text div:nth-child(3){
+            width: 100%;
+            margin-left: 15px;
+            padding-bottom: 10px;
+        }
+        #container_qlq_pro_text h2, #container_qlq_pro_text p{
+            font-weight: 900;
+            color: white;
+        }
+    }
+    
+    /* FIN SECTION A PARTIR DE <h3>QUELQUES PROFESSIONELS</h3> */
+
+    /* SECTION A PARTIR DE <div id="container_qlq_profe"> */
+        @media screen and (min-height:1400px) {
+            #container_btn_scroll_down{
+                margin-top: 190px;
+            }
+        }
+        @media screen and (max-width:991px) {
+            #container_btn_scroll_down{
+                margin-top: 70px;
+            }
+        }
+        @media screen and (max-width:550px) {
+            #container_btn_scroll_down{
+                margin-top: 100px;
+            }
+        }
+        @media screen and (max-width:498px) {
+            #container_btn_scroll_down{
+                margin-top: 140px;
+            }
+        }
+        @media screen and (max-width:368px) {
+            #container_btn_scroll_down{
+                margin-top: 180px;
+            }
+        }
+    /* FIN SECTION A PARTIR DE <div id="container_qlq_profe"> */
+
+    /* SECTION A PARTIR DE <!--liste des profi par professions--> */
+    @media screen and (min-width:1210px) {
+        .container_affich_profil_par_profe{
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: 900;
+        }
+        .item_container_profil_par_profe{
+            margin: 6px;
+            height: 425px;
+            width: calc(20% - 12px);
+        }
+
+        #container_raccourci{
+            width: 350px; 
+            height:89vh
+        }
+    }
+
+    @media screen and (max-width:1209px) {
+        .container_affich_profil_par_profe{
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: 900;
+        }
+        .item_container_profil_par_profe{
+            height: 425px;
+            margin: 6px;
+            width: calc(20% - 12px);
+        }
+        #container_raccourci{
+            width: 350px; 
+            height:89vh
+        }
+    }
+    @media screen and (max-width:1180px) {
+        .container_affich_profil_par_profe{
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: 900;
+        }
+        .item_container_profil_par_profe{
+            margin: 6px;
+            width: calc(25% - 12px);
+        }
+    }
+    @media screen and (max-width:983px) {
+        .container_affich_profil_par_profe{
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: 900;
+        }
+        .item_container_profil_par_profe{
+            height: 470px;
+            margin: 6px;
+            width: calc(33.33% - 12px);
+        }
+    }
+    @media screen and (max-width:770px) {
+        .container_affich_profil_par_profe{
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: 900;
+        }
+        .item_container_profil_par_profe{
+            height: 470px;
+            margin: 6px;
+            width: calc(25% - 12px);
+        }
+        #container_raccourci{
+            display: none;
+        }
+    }
+    @media screen and (max-width:680px) {
+        .container_affich_profil_par_profe{
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: 900;
+        }
+        .item_container_profil_par_profe{
+            margin: 6px;
+            width: calc(33.33% - 12px);
+        }
+        main{
+            overflow-x: hidden;
+        }
+    }
+    @media screen and (max-width:530px) {
+        .container_affich_profil_par_profe{
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: 900;
+        }
+        .item_container_profil_par_profe{
+            margin: 6px;
+            width: calc(50% - 12px);
+        }
+    }
+    @media screen and (max-width:340px) {
+        .container_affich_profil_par_profe{
+            display: flex;
+            flex-wrap: wrap;
+            font-weight: 900;
+        }
+        .item_container_profil_par_profe{
+            margin: 6px;
+            width: calc(100% - 12px);
+        }
+    }
+    /* FIN SECTION A PARTIR DE <!--liste des profi par professions--> */
+/* fin responsive pour index */
+
+
+#container_raccourci a{
+    color: gray;
+    margin-left: 12px;
+    transform: translateX(0);
+    transition: color 0.5s, transform 0.5s;
+}
+#container_raccourci a:hover{
+    color:#b88a4d;
+    transform: translateX(12px);
+    transition: color 0.5s, transform 0.5s;
+}

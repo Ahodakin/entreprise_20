@@ -1,0 +1,435 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <title>SweetAlert</title>
+
+  <link rel="stylesheet" href="example/example.css">
+  
+  <script src="dist/sweetalert-dev.js"></script>
+  <link rel="stylesheet" href="dist/sweetalert.css"
+</head>
+
+<body>
+<button class="download">Download</button>
+
+<div class="showcase normal">
+	<button>Bouton simple</button>
+<div class="vs-icon">
+</div>
+
+<div class="showcase sweet">
+	<button>Bouton simple</button>
+</div>
+<!-- Examples -->
+<h3>Plus d'exemples</h3>
+
+<ul class="examples">
+
+	<li class="message">
+		<div class="ui">
+			<p>Un message simple</p>
+			<button>Afficher</button>
+		</div>
+	</li>
+
+	<li class="title-text">
+		<div class="ui">
+			<p>Un titre avec un texte en dessous</p>
+			<button>Afficher</button>
+		</div>
+		
+	</li>
+
+	<li class="success">
+		<div class="ui">
+			<p>Un message de succes!</p>
+			<button>Afficher</button>
+		</div>
+	</li>
+
+	<li class="warning confirm">
+		<div class="ui">
+			<p>un message critique, avec une fonction attache a la validation</p>
+			<button>Afficher</button>
+		</div>
+		
+	</li>
+
+	<li class="warning cancel">
+		<div class="ui">
+			<p>Mettre une action sur le bouton Annuler</p>
+			<button>Afficher</button>
+		</div>
+	</li>
+
+	<li class="custom-icon">
+		<div class="ui">
+			<p>Un message avec une icone</p>
+			<button>Afficher</button>
+		</div>
+	</li>
+
+	<li class="message-html">
+		<div class="ui">
+			<p>Un message HTML</p>
+			<button>Afficher</button>
+		</div>
+	</li>
+
+	<li class="timer">
+		<div class="ui">
+			<p>Message avec ermeture automatique</p>
+			<button>Afficher</button>
+		</div>
+		
+	</li>
+
+
+	<li class="input">
+		<div class="ui">
+			<p>Boite de saisie</p>
+			<button>Afficher</button>
+		</div>
+	</li>
+
+  <li class="ajax">
+    <div class="ui">
+			<p>With a loader (for AJAX request for example)</p>
+			<button>Afficher</button>
+		</div>
+	</li>
+
+	<li class="theme">
+		<div class="ui">
+			<p>Changer le theme de la boite de dialogue</p>
+			<button>Afficher</button>
+		</div>
+		
+</pre>
+	</li>
+</ol>
+
+
+<h3>Configuration</h3>
+<table>
+	<tr class="titles">
+		<th>
+			<div class="border-left"></div>
+			Argument
+		</th>
+		<th>Default value</th>
+		<th>
+			<div class="border-right"></div>
+			Description
+		</th>
+	</tr>
+	<tr>
+		<td><b>title</b></td>
+		<td><i>null (required)</i></td>
+		<td>The title of the modal. It can either be added to the object under the key "title" or passed as the first parameter of the function.</td>
+	</tr>
+	<tr>
+		<td><b>text</b></td>
+		<td><i>null</i></td>
+		<td>A description for the modal. It can either be added to the object under the key "text" or passed as the second parameter of the function.</td>
+	</tr>
+	<tr>
+		<td><b>type</b></td>
+		<td><i>null</i></td>
+		<td>The type of the modal. SweetAlert comes with 4 built-in types which will show a corresponding icon animation: "<strong>warning</strong>", "<strong>error</strong>", "<strong>success</strong>" and "<strong>info"</strong>. You can also set it as "<strong>input</strong>" to get a prompt modal. It can either be put in the object under the key "type" or passed as the third parameter of the function.</td>
+	</tr>
+    <tr>
+      <td><b>allowEscapeKey</b></td>
+      <td><i>true</i></td>
+      <td>If set to <strong>true</strong>, the user can dismiss the modal by pressing the Escape key.</td>
+    </tr>
+	<tr>
+		<td><b>customClass</b></td>
+		<td><i>null</i></td>
+		<td>A custom CSS class for the modal. It can be added to the object under the key "customClass".</td>
+	</tr>
+	<tr>
+		<td><b>allowOutsideClick</b></td>
+		<td><i>false</i></td>
+		<td>If set to <strong>true</strong>, the user can dismiss the modal by clicking outside it.</td>
+	</tr>
+	<tr>
+		<td><b>showCancelButton</b></td>
+		<td><i>false</i></td>
+		<td>If set to <strong>true</strong>, a "Cancel"-button will be shown, which the user can click on to dismiss the modal.</td>
+	</tr>
+	<tr>
+		<td><b>showConfirmButton</b></td>
+		<td><i>true</i></td>
+		<td>If set to <strong>false</strong>, the "OK/Confirm"-button will be hidden. Make sure you set a timer or set allowOutsideClick to true when using this, in order not to annoy the user.</td>
+	</tr>
+	<tr>
+		<td><b>confirmButtonText</b></td>
+		<td><i>"OK"</i></td>
+		<td>Use this to change the text on the "Confirm"-button. If showCancelButton is set as true, the confirm button will automatically show "Confirm" instead of "OK".</td>
+	</tr>
+	<tr>
+		<td><b>confirmButtonColor</b></td>
+		<td><i>"#AEDEF4"</i></td>
+		<td>Use this to change the background color of the "Confirm"-button (must be a HEX value).</td>
+	</tr>
+	<tr>
+		<td><b>cancelButtonText</b></td>
+		<td><i>"Cancel"</i></td>
+		<td>Use this to change the text on the "Cancel"-button.</td>
+	</tr>
+	<tr>
+		<td><b>closeOnConfirm</b></td>
+		<td><i>true</i></td>
+		<td>Set to <i>false</i> if you want the modal to stay open even if the user presses the "Confirm"-button. This is especially useful if the function attached to the "Confirm"-button is another SweetAlert.</td>
+	</tr>
+	<tr>
+		<td><b>closeOnCancel</b></td>
+		<td><i>true</i></td>
+		<td>Same as closeOnConfirm, but for the cancel button.</td>
+	</tr>
+	<tr>
+		<td><b>imageUrl</b></td>
+		<td><i>null</i></td>
+		<td>Add a customized icon for the modal. Should contain a string with the path to the image.</td>
+	</tr>
+	<tr>
+		<td><b>imageSize</b></td>
+		<td><i>"80x80"</i></td>
+		<td>If imageUrl is set, you can specify imageSize to describes how big you want the icon to be in px. Pass in a string with two values separated by an "x". The first value is the width, the second is the height.</td>
+	</tr>
+	<tr>
+		<td><b>timer</b></td>
+		<td><i>null</i></td>
+		<td>Auto close timer of the modal. Set in ms (milliseconds).</td>
+	</tr>
+	<tr>
+		<td><b>html</b></td>
+		<td><i>false</i></td>
+		<td>If set to true, will not escape title and text parameters. (Set to false if you're worried about XSS attacks.)</td>
+	</tr>
+	<tr>
+		<td><b>animation</b></td>
+		<td><i>true</i></td>
+		<td>If set to <strong>false</strong>, the modal's animation will be disabled. Possible (string) values : <strong>pop</strong> (default when animation set to true), <strong>slide-from-top</strong>, <strong>slide-from-bottom</strong></td>
+	</tr>
+	<tr>
+		<td><b>inputType</b></td>
+		<td><i>"text"</i></td>
+		<td>Change the type of the input field when using <strong>type: "input"</strong> (this can be useful if you want users to type in their password for example).</td>
+	</tr>
+	<tr>
+		<td><b>inputPlaceholder</b></td>
+		<td><i>null</i></td>
+		<td>When using the input-type, you can specify a placeholder to help the user.</td>
+	</tr>
+	<tr>
+		<td><b>inputValue</b></td>
+		<td><i>null</i></td>
+		<td>Specify a default text value that you want your input to show when using <strong>type: "input"</strong></td>
+	</tr>
+	<tr>
+		<td><b>showLoaderOnConfirm</b></td>
+		<td><i>false</i></td>
+    <td>Set to <strong>true</strong> to disable the buttons and show that something is loading.</td>
+	</tr>
+</table>
+
+
+<!-- Methods -->
+<h3>Methods</h3>
+
+<p class="center">SweetAlert also comes with some simple methods that you can call:</p>
+
+<table>
+	<tr class="titles">
+		<th>
+			<div class="border-left"></div>
+			Function
+		</th>
+		<th>Example</th>
+		<th>
+			<div class="border-right"></div>
+			Description
+		</th>
+	</tr>
+	<tr>
+		<td>setDefaults</td>
+		<td><i>swal.setDefaults({ confirmButtonColor: '#0000' });</i></td>
+		<td>If you end up using a lot of the same settings when calling SweetAlert, you can use setDefaults at the start of your program to set them once and for all!</td>
+	</tr>
+	<tr>
+		<td>close</td>
+		<td><i>swal.close();</i></td>
+		<td>Close the currently open SweetAlert programatically.</td>
+	</tr>
+	<tr>
+		<td>showInputError</td>
+		<td><i>swal.showInputError("Invalid email!");</i></td>
+		<td>Show an error message after validating the input field, if the user's data is bad</td>
+	</tr>
+	<tr>
+		<td>enableButtons, disableButtons</td>
+		<td><i>swal.disableButtons();</i></td>
+		<td>Disable or enable the user to click on the cancel and confirm buttons.</td>
+	</tr>
+</table>
+
+
+
+<!-- Contribute -->
+<h3>Contribute</h3>
+<p>SweetAlert was created by <a href="http://tristanedwards.me" target="_blank">Tristan Edwards</a>, you can follow him on <a href="https://twitter.com/t4t5" target="_blank" class="twitter">Twitter</a> or <a href="https://dribbble.com/tristanedwards" target="_blank" class="dribbble">Dribbble</a> for updates and other cool projects!</p>
+<p>Feel free to fork SweetAlert on <a href="https://github.com/t4t5/sweetalert" class="github">GitHub</a> if you have any features that you want to add!</p>
+
+
+<footer>
+	<span class="te-logo">TE</span> • <script>document.write(new Date().getFullYear())</script>
+</footer>
+
+
+<script>
+
+document.querySelector('button.download').onclick = function(){
+	$("html, body").animate({ scrollTop: $("#download-section").offset().top }, 1000);
+};
+
+document.querySelector('.showcase.normal button').onclick = function(){
+	alert("Oops... Something went wrong!");
+};
+
+document.querySelector('.showcase.sweet button').onclick = function(){
+	swal("Oops...", "Something went wrong!", "error");
+};
+
+document.querySelector('ul.examples li.message button').onclick = function(){
+	swal("Here's a message!");
+};
+
+document.querySelector('ul.examples li.timer button').onclick = function(){
+	swal({
+		title: "Auto close alert!",
+		text: "I will close in 2 seconds.",
+		timer: 2000,
+		showConfirmButton: false
+	});
+};
+
+document.querySelector('ul.examples li.title-text button').onclick = function(){
+	swal("Here's a message!", "It's pretty, isn't it?");
+};
+
+document.querySelector('ul.examples li.success button').onclick = function(){
+	swal("Good job!", "You clicked the button!", "success");
+};
+
+document.querySelector('ul.examples li.warning.confirm button').onclick = function(){
+	swal({
+		title: "Are you sure?",
+		text: "You will not be able to recover this imaginary file!",
+		type: "warning",
+		showCancelButton: true,
+		confirmButtonColor: '#DD6B55',
+		confirmButtonText: 'Yes, delete it!',
+		closeOnConfirm: false
+	},
+	function(){
+		swal("Deleted!", "Your imaginary file has been deleted!", "success");
+	});
+};
+
+document.querySelector('ul.examples li.warning.cancel button').onclick = function(){
+	swal({
+		title: "Are you sure?",
+		text: "You will not be able to recover this imaginary file!",
+		type: "warning",
+		showCancelButton: true,
+		confirmButtonColor: '#DD6B55',
+		confirmButtonText: 'Yes, delete it!',
+		cancelButtonText: "No, cancel plx!",
+		closeOnConfirm: false,
+		closeOnCancel: false
+	},
+	function(isConfirm){
+    if (isConfirm){
+      swal("Deleted!", "Your imaginary file has been deleted!", "success");
+    } else {
+      swal("Cancelled", "Your imaginary file is safe :)", "error");
+    }
+	});
+};
+
+document.querySelector('ul.examples li.custom-icon button').onclick = function(){
+	swal({
+		title: "Sweet!",
+		text: "Here's a custom image.",
+		imageUrl: 'example/images/thumbs-up.jpg'
+	});
+};
+
+document.querySelector('ul.examples li.message-html button').onclick = function(){
+	swal({
+		title: "HTML <small>Title</small>!",
+		text: 'A custom <span style="color:#F8BB86">html<span> message.',
+		html: true
+	});
+};
+
+document.querySelector('ul.examples li.input button').onclick = function(){
+	swal({
+		title: "An input!",
+		text: 'Write something interesting:',
+		type: 'input',
+		showCancelButton: true,
+		closeOnConfirm: false,
+		animation: "slide-from-top",
+		inputPlaceholder: "Write something",
+	},
+	function(inputValue){
+		if (inputValue === false) return false;
+
+		if (inputValue === "") {
+			swal.showInputError("You need to write something!");
+			return false;
+		}
+    
+		swal("Nice!", 'You wrote: ' + inputValue, "success");
+
+	});
+};
+
+document.querySelector('ul.examples li.theme button').onclick = function() {
+	swal({
+		title: "Themes!",
+		text: "Here's the Twitter theme for SweetAlert!",
+		confirmButtonText: "Cool!",
+		customClass: 'twitter'
+	});
+};
+
+document.querySelector('ul.examples li.ajax button').onclick = function() {
+  swal({
+    title: 'Ajax request example',
+    text: 'Submit to run ajax request',
+    type: 'info',
+    showCancelButton: true,
+    closeOnConfirm: false,
+    showLoaderOnConfirm: true,
+  }, function(){
+    setTimeout(function() {
+      swal('Ajax request finished!');
+    }, 2000);
+  });
+};
+
+</script>
+
+
+
+</body>
+
+</html>
